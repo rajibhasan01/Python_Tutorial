@@ -1,0 +1,24 @@
+def func():
+    global x
+    print("1____________: ",x)
+    x = "Local"
+    print("2_________: ",x)
+x = "Rakib"
+func()
+print("3__________: ",x)
+
+################
+def func():
+    x = 50
+    def inner():
+        nonlocal x
+        x = 100
+        print("1________: ",x)
+
+    print("2________: ",x)
+    inner()
+    print("3__________: ",x)
+
+x = 20
+func()
+print(x)

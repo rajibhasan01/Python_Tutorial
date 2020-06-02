@@ -1,0 +1,35 @@
+import math
+class Circle:
+    def __init__(self,radius):
+        self.radius = radius
+
+    # def setRadius(self,radius):
+    #     return self.radius
+
+    def getRadius(self):
+        return self.radius
+
+    def area(self):
+        return math.pi*self.radius**2
+
+    def __add__(self, circle_object):
+        return Circle(self.radius+circle_object.radius)
+
+    def __lt__(self, other):
+        return (self.area() < other.area())
+
+    def __gt__(self, other):
+        return (self.area()>other.area())
+
+
+
+c1 = Circle(2)
+c2 = Circle(3)
+c3 = c1 + c2
+
+print(c1.getRadius())
+print(c3.getRadius())
+
+print(c1>c2)
+print(c1<c2)
+print(c3> c2)

@@ -1,0 +1,12 @@
+def pop(list):
+    def get_the_last_item(my_list):
+        return my_list[len(list)-1]
+
+    list.remove(get_the_last_item(list))
+    return list
+
+
+a = list(map(int, input().rstrip().split()))
+print(pop(a))
+print(pop(a))
+print(pop(a))

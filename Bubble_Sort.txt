@@ -1,0 +1,15 @@
+class bubble_sort:
+    def __init__(self,list):
+        self.list = list
+
+        for i in range(len(self.list)-1,0,-1):
+            for j in range(i):
+                if list[j] > list[j+1]:
+                    temp = list[j]
+                    num[j] = num[j+1]
+                    num[j+1]= temp
+
+
+num = list(map(int, input().rstrip().split()))
+sort = bubble_sort(num)
+print(num)

@@ -1,0 +1,31 @@
+class Rectangular:
+    def __init__(self,height,width):
+        self.__height  = height
+        self.__width = width
+
+    def set_height(self,value):
+        self.__height = value
+    def set_width(self,value):
+        self.__width = value
+
+    def get_height(self):
+        return self.__height
+
+    def get_width(self):
+        return self.__width
+
+    def area(self):
+
+        return self.__height*self.__width
+
+rect1 = Rectangular(20,10)
+rect2 = Rectangular(5,10)
+
+print(rect1.area())
+print(rect2.area())
+
+rect1.set_height(6)
+rect2.set_width(2)
+
+print(rect1.area())
+print(rect2.area())

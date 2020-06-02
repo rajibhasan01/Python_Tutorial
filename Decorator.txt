@@ -1,0 +1,50 @@
+def say_hello():
+    print("Hi, I am Rajib Hasan")
+
+def decorator_function(x):
+    def wrapper_function():
+        print("*"*25)
+        x()
+        print("*"*25)
+    return wrapper_function
+
+hello = decorator_function(say_hello)
+hello()
+
+###############
+
+def decorator_function(x):
+    def wrapper_function(a,b):
+        print("*"*25)
+        x(a,b)
+        print("*"*25)
+    return wrapper_function
+
+def divide(x,y):
+    try:
+        print(x/y)
+    except:
+        print("Error")
+
+div = decorator_function(divide)
+div(8,2)
+
+###############
+from time import time
+
+def my_timingfunction(func):
+    def timing(a):
+        start = time()
+        result = func(a)
+        end = time()
+        print("eclapsed time: {}".format(end-start))
+        return result
+    return timing
+def function(num):
+    sum = 0
+    for i in range(num+1):
+        sum = sum + i
+    return sum
+
+a = my_timingfunction(function)
+a(20000000)

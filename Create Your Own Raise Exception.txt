@@ -1,0 +1,27 @@
+#Create your own Raise Exception
+
+class CoffeeTooHotException(Exception):
+    def __init__(self,msg):
+        super().__init__(msg)
+        print("Coffee is too hot.")
+
+class CoffeeTooColdException(Exception):
+    def __init__(self,msg):
+        print("Coffee is too cold.")
+        super().__init__(msg)
+
+class CoffeeCup:
+    def __init__(self,temp):
+        self.__temp = temp
+    def drink_coffee(self):
+        if self.__temp > 85:
+            raise CoffeeTooHotException("Temperature: " + str(self.__temp))
+        elif self.__temp < 60:
+            raise CoffeeTooColdException("Temperature: " + str(self.__temp))
+
+        else:
+            print("Perfect to drink")
+
+temp = int(input("Enter the temperature: "))
+coffee = CoffeeCup(temp)
+coffee.drink_coffee()

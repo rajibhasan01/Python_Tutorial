@@ -1,0 +1,15 @@
+class CoffeeCup:
+    def __init__(self,temp):
+        self.__temp = temp
+    def drink_coffee(self):
+        if self.__temp > 85:
+            raise Exception("Coffee is too hot.")
+        elif self.__temp < 60:
+            raise Exception("Coffee is too cold.")
+
+        else:
+            print("Perfect to drink")
+
+temp = int(input("Enter the temperature: "))
+coffee = CoffeeCup(temp)
+coffee.drink_coffee()

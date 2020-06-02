@@ -1,0 +1,5 @@
+class Hello:
+    def __init__(self,*name,**kwargs):
+        print(name,kwargs)
+
+hello = Hello("Rajib","Asha",2,name ="Raisha")

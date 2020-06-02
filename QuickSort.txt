@@ -1,0 +1,18 @@
+def quick_sort(list):
+    length = len(list)
+    if length <= 1:
+        return list
+
+    lower_list = []
+    greater_list = []
+    pivot = list.pop()
+    for i in list:
+        if i < pivot:
+            lower_list.append(i)
+        else:
+            greater_list.append(i)
+
+    return quick_sort(lower_list) + [pivot] + quick_sort(greater_list)
+
+num = list(map(int, input().rstrip().split()))
+print(quick_sort(num))

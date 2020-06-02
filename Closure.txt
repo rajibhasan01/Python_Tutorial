@@ -1,0 +1,27 @@
+def outerFuntion(text):
+    def innerFunction():
+        print(text)
+    return innerFunction
+
+a = outerFuntion("Rajib")
+a()
+
+###################
+def outerFunction(text):
+    def innerFunction():
+        print(text)
+    return innerFunction
+
+a = outerFunction("Hello")
+del outerFunction
+a()
+
+##################
+def nth_pw(exponent):
+    def pow_of(num):
+        return pow(num,exponent)
+    return pow_of
+
+a = nth_pw(2)
+
+print(a(3))

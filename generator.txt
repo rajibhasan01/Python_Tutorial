@@ -1,0 +1,12 @@
+def my_function():
+
+    for i in range(5):
+        yield i
+
+
+x = my_function()
+print(next(x))
+print(x.__next__())
+print(next(x))
+print(next(x))
+print(next(x))

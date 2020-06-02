@@ -1,0 +1,8 @@
+fh = open("C://Users//Windows 10//Desktop//notes.txt",'r')
+a = fh.read()
+print(a)
+fh.close()
+
+
+with open("C://Users//Windows 10//Desktop//notes.txt",'r') as fh:
+    print(fh.read())

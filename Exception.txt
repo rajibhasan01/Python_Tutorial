@@ -1,0 +1,22 @@
+result = None
+a = float(input("Enter a value: "))
+b = float(input("Enter 2nd value: "))
+
+try:
+    result = a/b
+
+except Exception as e:
+    print("Error = ",type(e))
+
+except TypeError as e:
+    print("Error = ",type(e))
+
+else:
+    print("__else__")
+
+finally:
+    print("__final__")
+
+
+print("Result", result)
+print("End")

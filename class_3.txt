@@ -1,0 +1,14 @@
+class Car:
+    def __init__(self,speed,color):
+        print(speed)
+        print(color)
+        self.speed = speed
+        self.color = color
+
+
+ford = Car(200,"Red")
+honda = Car(250,"Black")
+Audi = Car(300,"Blue")
+
+print("Ford: ",ford.speed)
+print("Audi: ",Audi.speed)
