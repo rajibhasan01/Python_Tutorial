@@ -1,0 +1,17 @@
+def insertion_sort(list):
+    for i in range(1,len(list)):
+        key = list[i]
+        j = i - 1
+
+        while j >= 0 and key < list[j]:
+            list[j+1] = list[j]
+            j = j - 1
+        list[j+1] = key
+
+if __name__ == "__main__":
+    print("Enter your list below separate by space -")
+    num = list(map(int, input().rstrip().split()))
+
+    insertion_sort(num)
+
+    print("The sorted list is showing below -\n",num)
