@@ -1,0 +1,17 @@
+class Car:
+    wheel = 4
+
+    def __init__(self):
+        self.mil = 80
+        self.com = "BMW"
+
+
+car1 = Car()
+car2 = Car()
+
+Car.wheel = 5
+
+car1.mil = 90
+
+print(car1.mil,car1.com,car1.wheel)
+print(car2.mil,car2.com,car2.wheel)

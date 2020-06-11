@@ -1,0 +1,2 @@
+l =["aaa","bbb","cc","d"]
+print(sorted(l,key = len))

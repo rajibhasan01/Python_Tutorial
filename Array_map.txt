@@ -1,0 +1,7 @@
+n = 3
+arr = list(map(int,input().rstrip().split()[:n]))
+
+print(arr)
+
+arr1 = [[i for i in input().split(" ")] for j in range(n)]
+print(arr1)
