@@ -29,3 +29,39 @@ lap1 = Student.Laptop()
 lap2 = Student.Laptop()
 
 lap1.show()
+
+
+##########################################
+
+class Student:
+
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        self.laptop = self.Laptop()
+
+
+    def show(self):
+        print("Name: ",self.name)
+        print("Age: ",self.age)
+        self.laptop.show()
+
+
+    class Laptop:
+
+        def __init__(self):
+            self.model = "HP"
+            self.gen = "i5"
+            self.ram = 8
+        def show(self):
+            print("Model: ",self.model)
+            print("Generation: ",self.gen)
+            print("Ram: ",self.ram)
+
+s1 = Student("Rajib",26)
+s2 = Student("Asha",24)
+
+s1.show()
+s2.show()
+
+
